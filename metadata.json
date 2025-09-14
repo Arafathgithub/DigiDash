@@ -1,0 +1,5 @@
+{
+  "name": "Interactive Dashboard",
+  "description": "A dynamic dashboard application built with React and react-grid-layout. It features draggable, resizable cards for visualizing metrics and charts, with data loaded from JSON. The layout can be saved and restored for a personalized experience.",
+  "requestFramePermissions": []
+}

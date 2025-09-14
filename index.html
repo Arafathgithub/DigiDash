@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {},
+        },
+        plugins: [],
+      }
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/react-grid-layout/1.4.4/css/styles.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/react-resizable/3.0.5/css/styles.min.css"
+    />
+    <style>
+      /* Customize scrollbar for a better theme experience */
+      :root {
+        --scrollbar-track-bg: #f1f5f9; /* slate-100 */
+        --scrollbar-thumb-bg: #94a3b8; /* slate-400 */
+        --scrollbar-thumb-hover-bg: #64748b; /* slate-500 */
+      }
+      html.dark {
+        --scrollbar-track-bg: #1e293b; /* slate-800 */
+        --scrollbar-thumb-bg: #475569; /* slate-600 */
+        --scrollbar-thumb-hover-bg: #64748b; /* slate-500 */
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--scrollbar-track-bg);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--scrollbar-thumb-bg);
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--scrollbar-thumb-hover-bg);
+      }
+      .react-grid-item.react-grid-placeholder {
+        background: rgba(99, 102, 241, 0.2) !important; /* indigo-500 with opacity */
+        border-radius: 0.5rem;
+        border: 2px dashed #4f46e5; /* indigo-600 */
+      }
+      html.dark .react-grid-item.react-grid-placeholder {
+        background: rgba(71, 85, 105, 0.5) !important;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "recharts": "https://aistudiocdn.com/recharts@^3.2.0",
+    "react-grid-layout": "https://aistudiocdn.com/react-grid-layout@^1.5.2"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.jsx"></script>
+  </body>
+</html>
